@@ -1,0 +1,93 @@
+<html>
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <title>Alisha's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div class="container">
+            <div class="navbar">
+                <img src="alisha logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="blog.html">FOOD BLOG</a></li>
+                        <li><a href="https://www.instagram.com/thealishaaa_?igsh=MWd1MTRwNTJqaWFlYQ==">INSTAGRAM</a></li>
+                        </li>
+                    </ul>     
+                </nav>
+
+    <body onload="startTime()">
+    <h2>Time Now</h2> 
+    <div id="txt"></div>
+    <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+    </div>
+
+            <section id="home">
+                <h2>Welcome to my Website!</h2>
+                <h2>Hello, I am Alisha</h2>
+                <p>Your go-to blog for all things delicious!</p>
+                <p>This food enthusiast will introduce to you about food trends nowadays.</p>
+                <p>Note: I have created this website for my own educational preferences, which is for IML470 - Introduction to Web</p>
+                <p>Development and Library Portal, however I feel free to share anything here.</p>
+            </section>
+            
+            <section id="my pictures"></section>
+            <div class="card-container">
+                <div class="card">
+                    <img src="picture.jpg">
+                    <div class="card-content">
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="picture 3.jpg">
+                    <div class="card-content">
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="picture 4.jpg">
+                    <div class="card-content">
+                    </div>
+                </div>
+                
+            <section id="contact">
+                <h2>Share your thoughts with me!</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="mailto:alishanorlisam@gmail.com">Submit</button>   
+                </form>
+            </section>
+            
+            <footer>
+                <p>&copy; 2024 Alisha's Website</p>
+            </footer>
+        </div>
+        <script src="scripts.js"></script>
+</body>
+</html>

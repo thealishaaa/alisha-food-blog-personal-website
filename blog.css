@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-image: url(pink-background.jpg);
+    color: black;
+
+}
+
+nav {
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;   
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+.intro {
+    padding: 60px 20px;
+    min-height: 250px;
+    text-align: center;
+}
+
+.intro h1, .intro h2 {
+    color:black;
+    margin-bottom: 20px;
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
+    display: flex; /* Ensures card and content are aligned vertically */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.card .img-content {
+    flex: 1; /* Allows the image to take up available space */
+    height: 100%; /* Ensures the image content stretches to fit */
+    overflow: hidden;
+    position: relative;
+}
+
+.card .img-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.6s, filter 1s;
+}
+
+.card .content {
+    flex: 1; 
+    padding: 20px;
+    text-align: left;
+}
+
+.card .content .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
